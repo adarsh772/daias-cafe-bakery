@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #faf6f0;
+    --bg-sand: #f2ebe1;
+    --text-espresso: #1e1611;
+    --text-muted: #6b5d54;
+    --accent-caramel: #9e6b43;
+    --accent-caramel-hover: #855632;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-espresso);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-serif-editorial {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+}
