@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import OrderButton from './OrderButton';
+import logoImg from '../assets/1.png';
 
 const NAV_LINKS = [
   { name: 'Home', href: '#home', active: true },
@@ -33,7 +34,7 @@ export default function Navbar({ onBookTableClick }) {
         {/* Brand Logo */}
         <a href="#home" className="flex flex-col leading-none group">
           <span className="font-serif-editorial text-3xl md:text-4xl font-semibold tracking-tight text-[#8C5E35] group-hover:text-[#1E1611] transition-colors">
-             <img src="src/assets/1.png" alt="logo"  className='h-12.5'/>
+             <img src={logoImg} alt="logo"  className='h-12.5'/>
           </span>
           
         </a>

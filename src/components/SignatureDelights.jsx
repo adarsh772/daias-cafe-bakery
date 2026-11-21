@@ -1,60 +1,55 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import dish10003 from '../assets/10003.jpg';
+import dish10004 from '../assets/10004.jpg';
+import dish10005 from '../assets/10005.jpg';
+import dish10006 from '../assets/10006.jpg';
+import dish10007 from '../assets/10007.jpg';
+import dish10008 from '../assets/10008.jpg';
+import defaultAmbienceImg from '../assets/10013.jpg';
 
 const SIGNATURE_ITEMS = [
   {
     id: 1,
     name: 'AGLIO E OLIO',
-    
-    category: 'Artisan Dessert',
-    image:
-      'src/assets/10003.jpg',
+    category: 'Savory',
+    image: dish10003,
   },
   {
     id: 2,
     name: 'FOLDED PIZZA SANDWICH',
-   
     category: 'Fresh Bake',
-    image:
-      'src/assets/10004.jpg',
+    image: dish10004,
   },
   {
     id: 3,
     name: 'SHIITAKE MUSHROOM SANDWICH',
-    
     category: 'Savory',
-    image:
-      'src/assets/10005.jpg',
+    image: dish10005,
   },
   {
     id: 4,
     name: 'PECAN PIE',
-    
     category: 'House Special',
-    image:
-      'src/assets/10006.jpg',
+    image: dish10006,
   },
   {
     id: 5,
     name: 'MATCHA STRAWBERRY TART',
-   
-    category: 'Kitchen',
-    image:
-      'src/assets/10007.jpg',
+    category: 'Artisan Dessert',
+    image: dish10007,
   },
   {
     id: 6,
     name: 'Cappuccino',
-    
-    category: 'Savory',
-    image:
-      'src/assets/10008.jpg',
+    category: 'Beverage',
+    image: dish10008,
   },
 ];
 
 export default function SignatureDelights({
   onSelectDish,
-  ambienceImage = 'src/assets/10013.jpg',
+  ambienceImage = defaultAmbienceImg,
 }) {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 3;
@@ -157,9 +152,11 @@ export default function SignatureDelights({
                   <h3 className="font-sans text-xs sm:text-[13px] font-semibold tracking-[0.06em] uppercase text-[#1E1611] group-hover:text-[#9E6B43] transition-colors leading-snug">
                     {item.name}
                   </h3>
-                  <p className="text-sm font-medium text-[#6B5D54] mt-1">
-                    {item.price}
-                  </p>
+                  {item.price && (
+                    <p className="text-sm font-medium text-[#6B5D54] mt-1">
+                      {item.price}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

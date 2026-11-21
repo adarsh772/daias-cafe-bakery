@@ -1,5 +1,6 @@
 import React from 'react';
 import OrderButton from './OrderButton';
+import defaultStoryImg from '../assets/10010.png';
 import {
   Croissant,
   Coffee,
@@ -51,7 +52,7 @@ const USP_ITEMS = [
 
 export default function OurStoryAndUSP({
   onOrderOnlineClick,
-  storyImage = 'src/assets/10010.png',
+  storyImage = defaultStoryImg,
 }) {
   return (
     <section id="story" className="py-20 md:py-28 bg-[#FAF6F0]">

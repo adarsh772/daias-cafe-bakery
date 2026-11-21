@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star, Calendar, ArrowUpRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Calendar } from 'lucide-react';
 import OrderButton from './OrderButton';
+import defaultReservationBg from '../assets/10013.jpg';
 
 const REVIEWS = [
   {
@@ -42,7 +43,7 @@ const REVIEWS = [
 
 export default function TestimonialsAndBooking({
   zomatoUrl = 'https://www.zomato.com',
-  reservationBg = 'src/assets/10013.jpg',
+  reservationBg = defaultReservationBg,
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -148,9 +149,9 @@ export default function TestimonialsAndBooking({
               </p>
             </div>
 
-           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
-  <OrderButton>Reserve Your Table</OrderButton>
-</div>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
+              <OrderButton>Reserve Your Table</OrderButton>
+            </div>
           </div>
         </div>
       </div>
